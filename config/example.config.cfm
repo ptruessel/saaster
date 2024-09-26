@@ -1,11 +1,8 @@
 
 <cfscript>
 
-// ####################################
-// DATABASE SETTINGS
-// ####################################
-
-variables.datasource = "saaster_staging";
+// Setup Lucee
+include template="setup.cfm";
 
 
 // ####################################
@@ -13,13 +10,13 @@ variables.datasource = "saaster_staging";
 // ####################################
 
 // Environment
-variables.environment = "prod" // "dev" or "prod"
+variables.environment = "dev" // "dev" or "prod"
 
 // Enter the URL of your live project (incl. http:// or https://)
-variables.mainURL = "";
+variables.mainURL = "http://localhost:8085";
 
 // Password for the Scheduler (url.pass)
-variables.schedulePassword = "";
+variables.schedulePassword = "saaster2024";
 
 
 // ####################################
@@ -27,7 +24,7 @@ variables.schedulePassword = "";
 // ####################################
 
 // The name of your application.cfc / make sure its unique
-variables.applicationname = "saaster_staging";
+variables.applicationname = "saaster_dev";
 
 // Please use the timespan tag directly
 variables.sessiontimeout = createTimespan(00,03,00,00);
